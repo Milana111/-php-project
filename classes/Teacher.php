@@ -4,6 +4,10 @@
      public $otdel_id = 0;
 
     public function validate() {
+        if (!empty($this->otdel_id)) {
+            return true;
+            }
+          
         return false;   
        } 
  }
