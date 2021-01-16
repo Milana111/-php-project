@@ -1,4 +1,7 @@
- <!DOCTYPE html>
+<?php
+  require_once('./secure.php');
+?>
+<!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -10,19 +13,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title><?=($header)? $header : 'Расписание занятий колледжа';?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet"
-href="template/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="template/css/font-
-awesome.min.css">
-
-<link rel="stylesheet"
-href="template/css/ionicons.min.css">
-<link rel="stylesheet"
-href="template/css/AdminLTE.min.css">
-
-<link rel="stylesheet" href="template/css/skins/skin-
-blue.min.css">
+  <link rel="stylesheet" href="template/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="template/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="template/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="template/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="template/css/skins/skin-blue.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,9 +65,9 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>Р</b></span>
+      <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Расписание</b></span>
+      <span class="logo-lg">Расписание</span>
     </a>
 
     <!-- Header Navbar -->
@@ -81,7 +82,7 @@ desired effect
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <!-- Menu toggle button -->
-
+           
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
@@ -91,6 +92,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
+                        
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -113,6 +115,7 @@ desired effect
           <!-- Notifications Menu -->
           <li class="dropdown notifications-menu">
             <!-- Menu toggle button -->
+            
             <ul class="dropdown-menu">
               <li class="header">You have 10 notifications</li>
               <li>
@@ -132,6 +135,7 @@ desired effect
           <!-- Tasks Menu -->
           <li class="dropdown tasks-menu">
             <!-- Menu Toggle Button -->
+            
             <ul class="dropdown-menu">
               <li class="header">You have 9 tasks</li>
               <li>
@@ -166,34 +170,27 @@ desired effect
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
-              
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><b>Hello</b>, <?=$_SESSION['fio']?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <?=$_SESSION['fio']?>
+                  <small><?=$_SESSION['roleName']?></small>
                 </p>
               </li>
-              <!-- Menu Body -->
 
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  <form method="POST">
-
-<button type="submit" class="btn btn-default btn-
-flat" name="out">Выход</button>
-
-</form>
+                  <a href="#" class="btn btn-default btn-flat">Профиль</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <form method="POST">
+                    <button type="submit" class="btn btn-default btn-flat" name="out">Выход</button>
+                  </form>
                 </div>
               </li>
             </ul>
@@ -209,17 +206,7 @@ flat" name="out">Выход</button>
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-
-      <!-- search form (Optional) -->
-      <!-- /.search form -->
-
-
-
-
       <?php require_once 'template/menu.php'; ?>
-
-
 
     </section>
     <!-- /.sidebar -->
@@ -228,10 +215,9 @@ flat" name="out">Выход</button>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
 
     <!-- Main content -->
     <section class="content container-fluid">
-
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->

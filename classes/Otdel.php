@@ -1,11 +1,16 @@
+  
 <?php
- class Otdel extends Table {
-     public $otdel_id = 0;
-     public $name = '';
-     public $active = '';
+    class Otdel extends Table {
 
-    public function validate() {
-        return false;   
-       }   
- }
+        public $otdel_id = 0;
+        public $name = '';
+        public $active = 1;
+        
+        public function validate() {
+            if(!empty($this->name)) {
+                return true;
+            }
+            return false;
+        }
+    }
 ?>
