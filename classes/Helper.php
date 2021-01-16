@@ -1,15 +1,15 @@
 <?php
 class Helper {
-    public static clearString($str){
+    public static function clearString($str){
         return trim(strip_tags($str));
 
     }
 
-public static clearInt($str){
+public static function clearInt($str){
         return (int)$str;  
     }
 
-    public static printSelectOptions(array $key = $options){
+    public static function printSelectOptions($key, Array $options){
         if ($options) {
             foreach ($options as $option) { ?>
             <option value="<?=$option['id'];?>" <?=($key ==
@@ -19,7 +19,7 @@ public static clearInt($str){
             }
     }
 
-    public paginator($count, $current = 1, $size= 30){
+    public static function paginator($count, $current = 1, $size= 30){
         $numPages=ceil($count/$size);
 $href = $_SERVER['PHP_SELF'].'?page=';
 echo '<ul class="pagination ">';
