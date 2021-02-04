@@ -9,7 +9,7 @@
     } else {
         $schedules = null;
     }
-    require_once 'template/header.php';
+require_once 'template/header.php';
 ?>
 <div class="row">
     <div class="col-xs-12">
@@ -57,5 +57,4 @@
     </div>
 </div>
 <?php
-    require_once 'template/footer.php';
-?>
+require_once 'template/footer.php';?>
